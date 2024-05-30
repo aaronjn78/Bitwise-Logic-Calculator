@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.lang.NumberFormatException;
 
 public class App {
 
@@ -48,9 +47,15 @@ public class App {
         }
 
         ANDresult = CalcBitAND(number1, number2);
+        ORresult = CalcBitOR(number1, number2);
+        XORresult = CalcBitXOR(number1,number2);
+
         System.out.println(number1);
         System.out.println(number2);
-        System.out.println(ANDresult);
+        System.out.println("----------------");
+        System.out.println(ANDresult + " AND");
+        System.out.println(ORresult + " OR");
+        System.out.println(XORresult + " XOR");
 
 
     }
@@ -78,6 +83,30 @@ public class App {
         int result;
 
         result = binary1 & binary2;
+
+        return result;
+
+    }
+
+    public static Integer CalcBitOR(String number1, String number2) {
+
+        int binary1  = Integer.parseInt(number1);
+        int binary2 = Integer.parseInt(number2);
+        int result;
+
+        result = binary1|binary2;
+
+        return result;
+
+    }
+
+    public static Integer CalcBitXOR(String number1, String number2) {
+
+        int binary1  = Integer.parseInt(number1);
+        int binary2 = Integer.parseInt(number2);
+        int result;
+
+        result = binary1 ^ binary2;
 
         return result;
 

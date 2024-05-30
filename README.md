@@ -12,8 +12,10 @@ Commit 2:
 
 Commit 3:
     - added function to calculate bitwise AND logic
-    - added String variables to hold the validated user input arrays to make it possible
-    to parse the integer values to perform calculations
+    - added String variables to hold the validated user input arrays to make it possible to parse the integer values to perform calculations
 
-
+Commit 4:
+    - added functions to calculate OR and XOR
+    - planning to add formatting to "pad" start of results with 0's to improve appearance
+    - need to add exception handling for out of bound numbers
     
