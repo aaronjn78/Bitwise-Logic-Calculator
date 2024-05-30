@@ -10,5 +10,10 @@ Commit 2:
     = added request to user for second binary number
     - moved invalid entry message to method that checks for valid binary number
 
-    
+Commit 3:
+    - added function to calculate bitwise AND logic
+    - added String variables to hold the validated user input arrays to make it possible
+    to parse the integer values to perform calculations
+
+
     

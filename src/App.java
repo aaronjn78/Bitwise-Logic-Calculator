@@ -11,22 +11,21 @@ public class App {
         String userInput;
         String[] binary1;
         String[] binary2;
-        String ANDresult;
-        String ORresult;
-        String XORresult;
+        String number1 = "";
+        String number2 = "";
+        Integer ANDresult;
+        Integer ORresult;
+        Integer XORresult;
         Scanner s = new Scanner(System.in);
 
+        //loops to request user for binary numbers. Passes user entry to a method as an array
+        //to check each character to see if it's a 1 or 0
         do {
             System.out.println("Enter first binary number");
             userInput = s.nextLine();
             binary1 = userInput.split("");
         } while (!BinaryNumberCheck(binary1));
 
-        // if (BinaryNumberCheck(binary1)) {
-        // System.out.println("valid number");
-        // } else {
-        // System.out.println("invalid number");
-        // }
 
         do {
             System.out.println("Enter second binary number");
@@ -35,6 +34,24 @@ public class App {
         } while (!BinaryNumberCheck(binary2));
 
         s.close();
+
+
+        //take the array of strings and put it into a single string for each number.
+        //probably a more efficient way to process user input, checking for validity and then
+        //converting to numeric value for calculation but unsure what it is right now
+        for (String i : binary1) {
+            number1 = number1 + i;
+        }
+
+        for (String i : binary2) {
+            number2 = number2 + i;
+        }
+
+        ANDresult = CalcBitAND(number1, number2);
+        System.out.println(number1);
+        System.out.println(number2);
+        System.out.println(ANDresult);
+
 
     }
 
@@ -52,5 +69,17 @@ public class App {
             }
         }
         return valid;
+    }
+
+    public static Integer CalcBitAND(String number1, String number2) {
+
+        int binary1  = Integer.parseInt(number1);
+        int binary2 = Integer.parseInt(number2);
+        int result;
+
+        result = binary1 & binary2;
+
+        return result;
+
     }
 }
