@@ -19,3 +19,9 @@ Commit 4:
     - planning to add formatting to "pad" start of results with 0's to improve appearance
     - need to add exception handling for out of bound numbers
     
+Commit 5: (Major changes)
+    - added formtting to result to pad leading 0's to output
+    - discovered major issue with methods to calculate AND,OR and XOR values while testing padding
+        - added code to resize array of shortest entry and add 0's to the front
+        - passed arrays to method instead of strings in order for iterate through both and perform calculations
+        - minor variable renaming to match datatypes
